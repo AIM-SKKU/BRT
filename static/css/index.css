@@ -1,0 +1,514 @@
+:root {
+  --ink: #2c2f33;
+  --muted: #60656c;
+  --rule: #d9dde2;
+  --link-blue: #1683f3;
+  --accent: #de7658;
+  --paper-highlight: #eef3fb;
+  --button: #343434;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: #ffffff;
+  color: var(--ink);
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #ffffff;
+  color: var(--ink);
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+.page-container,
+.text-container,
+.figure-container,
+.table-container,
+.content-container {
+  margin-inline: auto;
+  padding-inline: 24px;
+  width: 100%;
+}
+
+.page-container {
+  max-width: 1120px;
+}
+
+.text-container {
+  max-width: 860px;
+}
+
+.figure-container {
+  max-width: 1200px;
+}
+
+.table-container {
+  max-width: 1320px;
+}
+
+.content-container {
+  max-width: 1280px;
+}
+
+.skip-link {
+  background: #ffffff;
+  border: 2px solid var(--ink);
+  color: var(--ink);
+  left: 16px;
+  padding: 8px 12px;
+  position: fixed;
+  top: -80px;
+  z-index: 20;
+}
+
+.skip-link:focus {
+  top: 16px;
+}
+
+.publication-header {
+  padding: 64px 0 24px;
+  text-align: center;
+}
+
+.header-container {
+  max-width: 1180px;
+}
+
+.publication-header h1 {
+  color: var(--ink);
+  font-size: clamp(2.45rem, 4.25vw, 3.45rem);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1.08;
+  margin: 0 auto;
+  max-width: 1080px;
+}
+
+.venue-badge {
+  border: 1px solid #ee9b83;
+  border-radius: 999px;
+  color: #b64e32;
+  display: inline-block;
+  font-size: 0.92rem;
+  font-weight: 700;
+  margin: 28px 0 0;
+  padding: 6px 14px;
+}
+
+.authors {
+  color: var(--link-blue);
+  font-size: 1.12rem;
+  line-height: 1.75;
+  margin: 24px auto 0;
+  max-width: 1000px;
+}
+
+.authors span {
+  white-space: nowrap;
+}
+
+sup {
+  font-size: 0.7em;
+  line-height: 0;
+  vertical-align: super;
+}
+
+.affiliations {
+  color: #363a3f;
+  font-size: 1rem;
+  margin: 4px 0 0;
+}
+
+.corresponding {
+  color: var(--muted);
+  font-size: 0.84rem;
+  margin: 3px 0 0;
+}
+
+.resource-list {
+  align-items: stretch;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  justify-content: center;
+  margin-top: 22px;
+}
+
+.resource-button {
+  align-items: center;
+  appearance: none;
+  background: var(--button);
+  border: 0;
+  border-radius: 999px;
+  color: #ffffff;
+  display: inline-grid;
+  grid-template-columns: 17px auto;
+  grid-template-rows: auto auto;
+  min-height: 43px;
+  min-width: 116px;
+  padding: 6px 14px 6px 12px;
+  text-align: left;
+}
+
+.resource-button:disabled {
+  color: #ffffff;
+  cursor: not-allowed;
+  opacity: 1;
+}
+
+.resource-button svg {
+  fill: none;
+  grid-row: 1 / 3;
+  height: 15px;
+  margin-right: 7px;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+  width: 15px;
+}
+
+.resource-button span {
+  font-size: 0.88rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.resource-button small {
+  color: #d6d6d6;
+  font-size: 0.58rem;
+  font-weight: 500;
+  letter-spacing: 0.045em;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.teaser-section {
+  padding: 44px 0 0;
+}
+
+.paper-section {
+  padding: 76px 0;
+}
+
+h2 {
+  color: var(--ink);
+  font-size: clamp(1.9rem, 3vw, 2.35rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+  margin: 0 0 22px;
+  text-align: center;
+}
+
+h3 {
+  color: var(--ink);
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+
+.section-copy {
+  color: #4d5258;
+  font-size: 1.02rem;
+  line-height: 1.72;
+  margin: 0;
+  max-width: none;
+  text-align: left;
+}
+
+.content-container > h2 {
+  text-align: left;
+}
+
+.figure-intro {
+  margin-top: 48px;
+}
+
+.paper-figure {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.paper-figure img {
+  margin-inline: auto;
+}
+
+.teaser-figure {
+  max-width: 1080px;
+}
+
+.wide-figure {
+  margin-top: 38px;
+  max-width: none;
+}
+
+.architecture-figure {
+  margin-top: 38px;
+  max-width: none;
+}
+
+.abstract-copy {
+  color: #3f4449;
+  font-size: 1rem;
+  line-height: 1.72;
+  text-align: justify;
+}
+
+.abstract-copy p {
+  margin: 0 0 1em;
+}
+
+.finding-note {
+  margin-top: -20px;
+}
+
+.finding-note p {
+  border-bottom: 1px solid var(--rule);
+  border-top: 1px solid var(--rule);
+  color: #3f4449;
+  font-size: 1.03rem;
+  line-height: 1.65;
+  margin: 0;
+  padding: 18px 0;
+}
+
+.table-scroll {
+  -webkit-overflow-scrolling: touch;
+  margin-top: 36px;
+  overflow-x: auto;
+  padding-bottom: 5px;
+}
+
+.table-scroll:focus-visible {
+  outline: 3px solid rgba(22, 131, 243, 0.5);
+  outline-offset: 5px;
+}
+
+.research-table {
+  background: #ffffff;
+  border-collapse: collapse;
+  color: #111111;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.04rem;
+  line-height: 1.25;
+  min-width: 1180px;
+  width: 100%;
+}
+
+.research-table th,
+.research-table td {
+  border: 0;
+  padding: 7px 8px;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.research-table thead th {
+  background: #ffffff;
+  border-bottom: 1px solid #444444;
+  border-top: 1.5px solid #222222;
+  color: #111111;
+  font-weight: 700;
+}
+
+.research-table thead th:first-child {
+  text-align: left;
+}
+
+.research-table thead th:not(:first-child),
+.research-table tbody td {
+  text-align: center;
+}
+
+.research-table tbody + tbody tr:first-child > * {
+  border-top: 1px solid #777777;
+}
+
+.research-table tbody:last-child tr:last-child > * {
+  border-bottom: 1.5px solid #222222;
+}
+
+.research-table th[scope="row"] {
+  font-weight: 600;
+  text-align: left;
+}
+
+.research-table .group-cell {
+  font-weight: 700;
+}
+
+.research-table .ours-row > * {
+  background: var(--paper-highlight);
+}
+
+.citation-section {
+  padding-top: 56px;
+}
+
+.bibtex-block {
+  background: #f7f7f7;
+  border: 1px solid var(--rule);
+  margin-top: 28px;
+  overflow-x: auto;
+}
+
+.bibtex-block:focus-visible {
+  outline: 3px solid rgba(22, 131, 243, 0.5);
+  outline-offset: 4px;
+}
+
+.bibtex-block pre {
+  background: transparent;
+  color: #30343a;
+  font-family: Consolas, "Liberation Mono", monospace;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  margin: 0;
+  min-height: 150px;
+  padding: 24px;
+  white-space: pre;
+}
+
+.collaboration-section {
+  padding-top: 0;
+}
+
+.collaboration-section a {
+  color: #3f67a3;
+  text-decoration: none;
+}
+
+.collaboration-section a:hover,
+.collaboration-section a:focus-visible {
+  text-decoration: underline;
+}
+
+.site-footer {
+  background: #ffffff;
+  border-top: 1px solid var(--rule);
+  color: #747980;
+  font-size: 0.78rem;
+  padding: 25px 0 32px;
+  text-align: center;
+}
+
+.site-footer p {
+  margin: 2px 0;
+}
+
+.contact-line {
+  margin: 8px 0 !important;
+}
+
+.site-footer a {
+  color: #3f67a3;
+  text-decoration: none;
+}
+
+.site-footer a:hover,
+.site-footer a:focus-visible {
+  text-decoration: underline;
+}
+
+.svg-sprite {
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  width: 0;
+}
+
+@media (max-width: 760px) {
+  .page-container,
+  .text-container,
+  .figure-container,
+  .table-container,
+  .content-container {
+    padding-inline: 18px;
+  }
+
+  .publication-header {
+    padding-top: 40px;
+  }
+
+  .publication-header h1 {
+    font-size: clamp(2rem, 9vw, 2.6rem);
+    letter-spacing: -0.03em;
+  }
+
+  .venue-badge {
+    margin-top: 22px;
+  }
+
+  .authors {
+    font-size: 0.98rem;
+    line-height: 1.8;
+  }
+
+  .affiliations {
+    font-size: 0.9rem;
+    line-height: 1.7;
+  }
+
+  .resource-list {
+    gap: 6px;
+  }
+
+  .resource-button {
+    min-width: 108px;
+  }
+
+  .teaser-section {
+    padding-top: 34px;
+  }
+
+  .paper-section {
+    padding: 56px 0;
+  }
+
+  .abstract-copy {
+    text-align: left;
+  }
+
+  .wide-figure,
+  .architecture-figure {
+    overflow-x: auto;
+    padding-bottom: 4px;
+    text-align: left;
+  }
+
+  .wide-figure img {
+    max-width: none;
+    min-width: 720px;
+    width: 720px;
+  }
+
+  .architecture-figure img {
+    max-width: none;
+    min-width: 680px;
+    width: 680px;
+  }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
