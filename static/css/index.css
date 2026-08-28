@@ -253,6 +253,10 @@ h3 {
   max-width: 1080px;
 }
 
+.teaser-section .figure-container {
+  max-width: 860px;
+}
+
 .wide-figure {
   margin-top: 38px;
   max-width: none;
